@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>可将网页内容导出到Word文档的jQuery插件</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/demo.css">
+	<!--[if IE]>
+		<script src="http://libs.useso.com/js/html5shiv/3.7/html5shiv.min.js"></script>
+	<![endif]-->
+</head>
+<body>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-9" id="pagecontent">
+				________________________________________________________________________________
+				
+				检索编号：
+				
+				
+				________________________________________________________________________________			
+				
+			</div>
+			<div class="col-md-3">
+				<a class="btn btn-default jquery-word-export" href="javascript:void(0)">
+						<span class="word-icon">W</span>
+						导出为.doc文档
+					 </a>
+			</div>
+		</div>
+	</div>
+	
+	<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+	<script type="text/javascript" src="js/FileSaver.js"></script>
+	<script type="text/javascript" src="js/jquery.wordexport.js"></script>
+	
+	<script type="text/javascript">
+	jQuery(document).ready(function($) {
+		$("a.jquery-word-export").click(function(event) {
+			$("#pagecontent").wordExport();
+		});
+	});
+	</script>
+	
+</body>
+</html>
